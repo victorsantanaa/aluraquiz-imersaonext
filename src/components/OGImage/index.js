@@ -1,13 +1,15 @@
-import Head from 'next/head'
+import React from 'react';
+import Head from 'next/head';
 
 function IndexPage() {
   return (
     <div>
       <Head>
-      <meta property="og:image" content="${db.bg}"/>
+        {/* eslint-disable-next-line no-template-curly-in-string */}
+        <meta property="og:image" content="${db.bg}" />
       </Head>
     </div>
-  )
+  );
 }
 
-export default IndexPage
+export default IndexPage;
