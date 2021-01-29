@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
@@ -11,17 +10,18 @@ import GitHubCorner from '../src/components/GitHubCorner';
 import QuizBackground from '../src/components/QuizBackground';
 import Input from '../src/components/Input';
 import Button from '../src/components/Button';
+import QuizContainer from '../src/components/QuizContainer';
 
-const QuizContainer = styled.div`
-  width: 100%;
-  max-width: 350px;
-  padding-top: 45px;
-  margin: auto 10%;
-  @media screen and (max-width: 500px) {
-    margin: auto;
-    padding: 15px;
-  }
-`;
+// const QuizContainer = styled.div`
+//   width: 100%;
+//   max-width: 350px;
+//   padding-top: 45px;
+//   margin: auto 10%;
+//   @media screen and (max-width: 500px) {
+//     margin: auto;
+//     padding: 15px;
+//   }
+// `;
 
 export default function Home() {
   const router = useRouter();
@@ -31,21 +31,11 @@ export default function Home() {
     <QuizBackground backgroundImage={db.bg}>
       <Head>
         <title>{db.title}</title>
-        <meta name="title" content="Quiz SNK" />
-        <meta name="description" content="Teste seus conhecimentos SNK" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Quiz SNK" />
-        <meta property="og:description" content="Teste seus conhecimentos SNK" />
-        <meta property="og:image" content="https://images4.alphacoders.com/607/thumb-1920-607877.jpg" />
-        <meta property="og:image:secure_url" content="https://images4.alphacoders.com/607/thumb-1920-607877.jpg" />
-        <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="400" />
-        <meta property="og:image:height" content="300" />
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://images4.alphacoders.com/607/thumb-1920-607877.jpg" />
-        <meta property="twitter:title" content="Quiz SNK" />
-        <meta property="twitter:description" content="Teste seus conhecimentos SNK" />
-        <meta property="twitter:image" content="https://images4.alphacoders.com/607/thumb-1920-607877.jpg" />
+        <meta property="og:image" content={db.bg} />
+        <title>{db.title}</title>
+        <meta property="og:title" content={db.title} key="title" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link rel="icon" type="image/png" href={db.icon} />
       </Head>
       <QuizContainer>
         <QuizLogo />
@@ -57,20 +47,23 @@ export default function Home() {
             <p>{db.description}</p>
             <form onSubmit={function (infosDoEvento) {
               infosDoEvento.preventDefault();
-              router.push(`/quiz?name=${name}`);
-              console.log('fazendo uma submissão por meio do react');
 
-              // router manda para a outra página
+              const audio = document.getElementById('bgm');
+              audio.loop = true;
+              audio.load();
+              audio.play();
+
+              router.push(`/quiz?name=${name}`);
             }}
             >
               <Input
                 name="nomeDoUsuario"
                 onChange={(infosDoEvento) => setName(infosDoEvento.target.value)}
-                placeholder="Me informa seu nomezinho pfvr?"
+                placeholder="Qual seu nome, guerreiro?"
                 value={name}
               />
               <Button type="submit" disabled={name.length === 0}>
-                Jogar
+                Tatakae!
               </Button>
             </form>
           </Widget.Content>
@@ -78,11 +71,10 @@ export default function Home() {
 
         <Widget>
           <Widget.Header>
-            <h1>Olá, eu sou desenvolvido em Next.js</h1>
-
+            <h1>Os outros quizes desenvolvidos durante a Imersão React da Alura</h1>
           </Widget.Header>
           <Widget.Content>
-            <p>Aqui ta tudo o que deve ser escrito referido e refenciado conforme isoo bblablo</p>
+            <p>Aqui ficarão os quizzes da galera, aguarde...</p>
           </Widget.Content>
         </Widget>
         <Footer />

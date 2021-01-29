@@ -1,28 +1,42 @@
 {
     "bg": "https://images4.alphacoders.com/607/thumb-1920-607877.jpg",
-    "title": "Dev Quiz",
-    "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
+    "title": "Shingeki Quiz",
+    "description": "Teste os seus conhecimentos sobre Shingeki no Kyojin",
     "questions": [
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
-        "description": "Essa é pra aquecer",
-        "answer": 2,
+        "image": "https://media.tenor.com/images/3605189ef050b3a0240948af4e8d3c54/tenor.gif",
+        "title": "O que Eren tem que fazer para se transformar em um titã?",
+        "description": "Algo deve ser feito para que todos os titãs originais se transformem",
+        "answer": 3,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "Pular de cima de um prédio para a velocidade transformá-lo em um titã.",
+          "Machucar uma parte de seu corpo fazendo-a sangrar.",
+          "Gritar o tema da Tropa de Exploração.",
+          "Tem claro seus objetivos em mente e estar machucado no momento."
         ]
       },
-      {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Como fazer um background gradiente com css?",
-        "description": "Faz tempo em haha",
-        "answer": 0,
+      { 
+        "image": "http://snk-iron.weebly.com/uploads/2/7/1/1/27112571/15954_orig.jpg",
+        "title": "Quais são as três muralhas existentes em que a humanidade vive para se proteger dos titãs?",
+        "description": "As três muralhas são referencias ao nome das 3 filhas de Ymir",
+        "answer": 2,
         "alternatives": [
-           "background: linear-gradient(#e66465, #9198e5);",
-           "background: gradient(#e66465, #9198e5);"
+          "Shiganshina, Rose e Manta.",
+          "Marta, Rosália e Siná.",
+          "Maria, Rose e Sina.",
+          "Marta, Rosa e Simbala."
+        ]
+      },
+      { 
+        "image": "https://i.pinimg.com/736x/fe/4b/d4/fe4bd4d0a839a4512239ed506a8e5559.jpg",
+        "title": "Qual o significado do brasão da Tropa de Exploração?",
+        "description": "A tropa de exploração é também conhecida como Reconhecimento",
+        "answer": 3,
+        "alternatives": [
+          "São as Rosas da Vitória, as quais significam o triunfo dos humanos sobre os titãs que ainda virá.",
+          "São as Espadas da Destruição, as quais nunca errarão um golpe nos titãs que amedrontarem a humanidade.",
+          "É na verdade um unicórnio, criatura mística que segundo as profecias usa seu poder mágico para salvar a humanidade das afrontas que são os titãs.",
+          "São as Asas da Liberdade, as quais destroem os titãs fora das muralhas para salvar a humanidade."
         ]
       }
     ],
@@ -31,9 +45,9 @@
     ],
     "theme": {
       "colors": {
-        "primary": "#388e3c",
-        "secondary": "#fdd835",
-        "mainBg": "#27632a",
+        "primary": "#3c4e3c",
+        "secondary": "#a47d57",
+        "mainBg": "#37473c",
         "contrastText": "#FFFFFF",
         "wrong": "#FF5722",
         "success": "#4CAF50"
